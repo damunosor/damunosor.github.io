@@ -27,7 +27,7 @@
 				<!-- Main -->
 					<section id="main" class="wrapper style2 spotlights">
 						<div class="inner">
-							<h1 class="major">School Databse</h1>
+							<h1 class="major">School Database</h1>
 							<p>For a school database. The following entities were be identified:</p>
 							<p><span class="image"><img src="images/Entities.jpg" alt="" data-position="25% 25%" /></span></p>
 							<h2>Relationship types</h2>
@@ -43,73 +43,67 @@
 							<h2>My SQL Workbench</h2>
 							<p><span class="image"><img src="images/school_database.png" alt="" data-position="25% 25%" /></span></p>
 							<h2>SQL Script</h2>
-							<p>- MySQL Workbench Forward Engineering
-							SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-							SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-							SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
-							
-							-- -----------------------------------------------------
-							-- Schema school_db
-							-- -----------------------------------------------------
-							
-							-- -----------------------------------------------------
-							-- Schema school_db
-							-- -----------------------------------------------------
-							CREATE SCHEMA IF NOT EXISTS `school_db` DEFAULT CHARACTER SET utf8 ;
-							USE `school_db` ;
-							
-							-- -----------------------------------------------------
-							-- Table `school_db`.`exam_board`
-							-- -----------------------------------------------------
-							CREATE TABLE IF NOT EXISTS `school_db`.`exam_board` (
-							  `exam_board` VARCHAR(255) NOT NULL,
-							  PRIMARY KEY (`exam_board`))
-							ENGINE = InnoDB;
-							
-							
-							-- -----------------------------------------------------
-							-- Table `school_db`.`course`
-							-- -----------------------------------------------------
-							CREATE TABLE IF NOT EXISTS `school_db`.`course` (
-							  `course_name` VARCHAR(255) NOT NULL,
-							  `teacher_name` VARCHAR(255) NULL,
-							  `exam_board_exam_board` VARCHAR(255) NOT NULL,
-							  PRIMARY KEY (`course_name`, `exam_board_exam_board`),
-							  INDEX `fk_course_exam_board_idx` (`exam_board_exam_board` ASC) VISIBLE,
-							  CONSTRAINT `fk_course_exam_board`
-								FOREIGN KEY (`exam_board_exam_board`)
-								REFERENCES `school_db`.`exam_board` (`exam_board`)
-								ON DELETE NO ACTION
-								ON UPDATE NO ACTION)
-							ENGINE = InnoDB;
-							
-							
-							-- -----------------------------------------------------
-							-- Table `school_db`.`student`
-							-- -----------------------------------------------------
-							CREATE TABLE IF NOT EXISTS `school_db`.`student` (
-							  `student_number` INT NOT NULL,
-							  `student_name` VARCHAR(255) NULL,
-							  `exam_score` VARCHAR(45) NULL,
-							  `support` VARCHAR(45) NULL,
-							  `birth` DATE NULL,
-							  `course_course_name` VARCHAR(255) NOT NULL,
-							  `course_exam_board_exam_board` VARCHAR(255) NOT NULL,
-							  PRIMARY KEY (`student_number`, `course_course_name`, `course_exam_board_exam_board`),
-							  INDEX `fk_student_course1_idx` (`course_course_name` ASC, `course_exam_board_exam_board` ASC) VISIBLE,
-							  CONSTRAINT `fk_student_course1`
-								FOREIGN KEY (`course_course_name` , `course_exam_board_exam_board`)
-								REFERENCES `school_db`.`course` (`course_name` , `exam_board_exam_board`)
-								ON DELETE NO ACTION
-								ON UPDATE NO ACTION)
-							ENGINE = InnoDB;
-							
-							
-							SET SQL_MODE=@OLD_SQL_MODE;
-							SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-							SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-							
-							</p>
+							<p>- MySQL Workbench Forward Engineering</p>
+							<p>SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;</p>
+							<p>SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;</p>
+							<p>SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';</p>
+							<p></p>
+							<p>-- -----------------------------------------------------</p>
+							<p>-- Schema school_db</p>
+							<p>-- -----------------------------------------------------</p>
+							<p></p>
+							<p>-- -----------------------------------------------------</p>
+							<p>-- Schema school_db</p>
+							<p>-- -----------------------------------------------------</p>
+							<p>CREATE SCHEMA IF NOT EXISTS `school_db` DEFAULT CHARACTER SET utf8 ;</p>
+							<p>USE `school_db` ;</p>
+							<p></p>
+							<p>-- -----------------------------------------------------</p>
+							<p>-- Table `school_db`.`exam_board`</p>
+							<p>-- -----------------------------------------------------</p>
+							<p>CREATE TABLE IF NOT EXISTS `school_db`.`exam_board` (</p>
+							<p>  `exam_board` VARCHAR(255) NOT NULL,</p>
+							<p>  PRIMARY KEY (`exam_board`))</p>
+							<p>ENGINE = InnoDB;</p>
+							<p>	</p>						
+							<p>-- -----------------------------------------------------</p>
+							<p>-- Table `school_db`.`course`</p>
+							<p>-- -----------------------------------------------------</p>
+							<p>CREATE TABLE IF NOT EXISTS `school_db`.`course` (</p>
+							<p>  `course_name` VARCHAR(255) NOT NULL,</p>
+							<p>  `teacher_name` VARCHAR(255) NULL,</p>
+							<p>  `exam_board_exam_board` VARCHAR(255) NOT NULL,</p>
+							<p> PRIMARY KEY (`course_name`, `exam_board_exam_board`),</p>
+							<p> INDEX `fk_course_exam_board_idx` (`exam_board_exam_board` ASC) VISIBLE,</p>
+							<p>CONSTRAINT `fk_course_exam_board`</p>
+							<p>	FOREIGN KEY (`exam_board_exam_board`)</p>
+							<p>	REFERENCES `school_db`.`exam_board` (`exam_board`)</p>
+							<p>     ON DELETE NO ACTION</p>
+							<p>     ON UPDATE NO ACTION)</p>
+							<p>     ENGINE = InnoDB;</p>
+							<p></p>
+							<p>-- -----------------------------------------------------</p>
+							<p>-- Table `school_db`.`student`</p>
+							<p>-- -----------------------------------------------------</p>
+							<p>CREATE TABLE IF NOT EXISTS `school_db`.`student` (</p>
+							<p>  `student_number` INT NOT NULL,</p>
+							<p>  `student_name` VARCHAR(255) NULL,</p>
+							<p>  `exam_score` VARCHAR(45) NULL,</p>
+							<p>  `support` VARCHAR(45) NULL,</p>
+							<p>  `birth` DATE NULL,</p>
+							<p>  `course_course_name` VARCHAR(255) NOT NULL,</p>
+							<p>  `course_exam_board_exam_board` VARCHAR(255) NOT NULL,</p>
+							<p>  PRIMARY KEY (`student_number`, `course_course_name`, `course_exam_board_exam_board`),</p>
+							<p>  INDEX `fk_student_course1_idx` (`course_course_name` ASC, `course_exam_board_exam_board` ASC) VISIBLE,</p>
+							<p>  CONSTRAINT `fk_student_course1`</p>
+							<p>	FOREIGN KEY (`course_course_name` , `course_exam_board_exam_board`)</p>
+							<p>	REFERENCES `school_db`.`course` (`course_name` , `exam_board_exam_board`)</p>
+							<p>	ON DELETE NO ACTION</p>
+							<p>	ON UPDATE NO ACTION)</p>
+							<p>ENGINE = InnoDB;</p>
+							<p>SET SQL_MODE=@OLD_SQL_MODE;</p>
+							<p>SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;</p>
+							<p>SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;</p>
 	
 					</section>
 
