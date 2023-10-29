@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Deciphering Big Data</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Deciphering Big Data</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html" class="active">Module 1</a></li>
+						<li><a href="generic1.html" class="active">Module 2</a></li>
+						<li><a href="generic2.html" class="active">Module 3</a></li>
+					</ul>
+				</nav>
+			</header>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper style2 spotlights">
+						<div class="inner">
+							<h1 class="major">TWITTER API</h1>
+              <h2>Purpose</h2>
+							<p>The Twitter API allows developers to access and interact with core Twitter data. It provides endpoints for fetching, posting, and analysing tweet data and is used for a variety of applications, from bots to analytics tools (Makice, 2009).</p>
+							<h2>Scope</h2>
+              <p>This specification covers the security aspects of data sharing, scraping, and connectivity between the Twitter API and Python code interacting with XML, JSON, and SQL systems.</p>
+              <h2>Identified Security Risks and Mitigations</h2>
+              <h3>Unauthorized Access</h3>
+              <p>One of the critical security risks associated with APIs is unauthorized access to user data. This risk arises when attackers are able to bypass authentication mechanisms and gain access to sensitive data. This can lead to serious consequences such as data breaches, identity theft, and unauthorized use of user information. To mitigate this risk, twitter API should implement strong authentication and authorization measures, such as secure token-based authentication, role-based access control (RBAC) mechanisms and OAuth (Siriwardena, 2020).</p>
+              <h3>Data Tampering</h3>
+              <p>Another significant security risk is the alteration of data during transit. This can occur when attackers intercept API requests and modify the data being transmitted. Data tampering can lead to the dissemination of false information, manipulation of user data, and potentially damaging consequences. To address this risk, strong encryption and integrity mechanisms should be implemented to ensure the integrity and confidentiality of data during transit. Additionally, implementing message authentication codes (MAC) and digital signatures can help detect and prevent data tampering (Diaz-Rojas et al., 2021).</p>
+              <h3>Data Breaches</h3>
+              <p>Data breaches pose a significant threat to both individuals and organizations. In the context of APIs, data breaches occur when sensitive information is exposed to unauthorized parties. This can include personally identifiable information (PII), financial data, and other confidential information. Data breaches can have severe consequences, such as financial loss, reputational damage, and legal implications. To mitigate this risk, APIs should enforce strict access controls, implement encryption for data at rest and in transit, and regularly conduct security assessments and vulnerability scans to identify and address potential vulnerabilities (Diaz-Rojas et al., 2021).</p>
+              <h3>SQL Injection</h3>
+              <p>SQL injection is a prevalent security vulnerability that can be exploited through ‘unsanitized’ data inputs into SQL databases (Halfond et al., 2006). Attackers can manipulate the SQL query structure by injecting malicious code, potentially leading to unauthorized access, data leakage, and even complete database compromise. To mitigate the risk of SQL injection, API users should adopt secure coding practices, such as parameterized queries or prepared statements, to prevent unauthorized execution of malicious SQL commands. Regular security testing and code reviews are also essential to identify and remediate any potential SQL injection vulnerabilities.</p>
+              <h3>Web Scraping</h3>
+              <p>While web scraping itself may not always be classified as a security risk, unauthorized and unregulated web scraping can pose significant threats. Automated tools or bots scraping data from APIs without proper authorisation can lead to various consequences, including unauthorized data collection, disruption of service availability, and abuse of resources (Brewer et al., 2021). Twitter API provider should implement effective API management strategies, including authentication, rate limiting, and usage policies, to regulate and control access to their API. Additionally, implementing CAPTCHA challenges or token-based access can help prevent malicious web scraping activities.</p>
+              <h2>Conclusion</h2>
+              <p>Ensuring the security of data, especially when integrating with external APIs, is paramount. As data professionals, it is imperative to ensure the safety and privacy of the data handled. By adhering to the outlined security requirements and mitigation strategies, we can ensure safer interactions between Python-based systems and all APIs in general across XML, JSON, and SQL formats can be ensured.</p>
+              <h2>References</h2>
+              <p>Brewer, R., Westlake, B., Hart, T., & Arauza, O. (2021). The Ethics of Web Crawling and Web Scraping in Cybercrime Research: Navigating Issues of Consent, Privacy, and Other Potential Harms Associated with Automated Data Collection. In Researching Cybercrimes (pp. 435–456). Springer International Publishing. https://doi.org/10.1007/978-3-030-74837-1_22</p>
+              <p>Diaz-Rojas, J. A., Ocharan-Hernandez, J. O., Perez-Arriaga, J. C., & Limon, X. (2021). Web API Security Vulnerabilities and Mitigation Mechanisms: A Systematic Mapping Study. 2021 9th International Conference in Software Engineering Research and Innovation (CONISOFT), 207–218. https://doi.org/10.1109/CONISOFT52520.2021.00036</p>
+              <p>Halfond, W. G., Viegas, J., & Orso, A. (2006). A classification of SQL-injection attacks and countermeasures. In Proceedings of the IEEE international symposium on secure software engineering (Vol. 1, pp. 13–15).</p>
+              <p>Makice, K. (2009). Twitter API: Up and Running (L. Ruma, Ed.; 1st ed.). O’Reilly Media, Inc</p>
+              <p>Siriwardena, P. (2020). OAuth 2.0 Profiles. In Advanced API Security (pp. 211–226). Apress. https://doi.org/10.1007/978-1-4842-2050-4_9</p>
+							
+						</div>
+					</section>
+
+			</div>
+		
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
